@@ -1,0 +1,68 @@
+<body>
+ <img src="/img/test1.png" alt="">
+  
+   <div class="effect">
+     <p contenteditable>
+    For you are the entire lake<br> 
+And all its algid waters<br>
+Down to the eternal stones <br>
+Dreaming in the still abyss.<br>
+ Simply gaze under<br>  
+The turbulent surface<br> 
+Below all the chaos<br> 
+Under the foaming tides.<br> 
+</p>
+          
+</div>
+
+</body>
+<svg display="none">
+  <defs>
+    <filter id="wreckit">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/>
+  <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+    </filter>
+  </defs>
+</svg>
+
+
+
+
+<style>
+/*@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');*/
+
+/*
+    body, html{
+  height:100%;
+  overflow:hidden;}
+*/
+  
+    img{
+        width: 30%;
+        position: absolute;
+        z-index:2;
+    }
+   .effect{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  filter:url('#wreckit');
+  animation: wavemover 100s infinite alternate linear;
+  font-family: 'Rubik Mono One', sans-serif;
+  background: #2396CA;
+        }
+
+    p{
+  color:#6DD2FD;
+  font-size:8vmax;
+  &::selection
+    background:blue;
+        }
+
+    @keyframes wavemover {
+  100% {
+    padding-left: 300px;
+/*    transform: translateX(-5px);*/
+  }
+</style>

@@ -1,0 +1,439 @@
+.wrap{
+    width: 100%;
+}
+.content{
+    width: 100%;
+/*    padding: 0 5% 0 5%;*/
+    overflow: hidden;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 4.2em;
+    line-height: 1.3em;
+}
+.section1{
+    width: 100%;
+    background-color: #163171;
+     background-attachment: fixed;
+    min-height: 850px; 
+    position: relative;
+}
+
+.flex {
+		width: 100%;
+		
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
+.ink{
+/*     z-index: 999;!imporant*/
+}
+.flex .ink{
+    color: #ffffff;
+    transition: all 0.2s;
+		height: 100%;
+        padding: 21% 0;
+        font-size: 1.5em;
+       
+}
+.mouse{
+    position: absolute;
+    bottom: 40px;
+    width: 41px;
+    height: 68px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+}
+.mouse::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: mouse 2s infinite;
+}
+@keyframes mouse{
+    from{
+        opacity:1;
+        top:10px;
+    }
+    to{
+        opacity: 0;
+        top: 55px;
+    }
+}
+
+.section2{
+ min-height: 850px;
+    width: 100%;
+    background-color: #fcfcfc;
+    position: relative;
+    margin-top: 9%;
+    overflow: hidden;
+   
+}
+.banner{
+    position: relative;
+    padding: 9% 0;
+    z-index: 3;
+}
+.banner_img{
+    width:100%;
+    padding: 10% 58%;
+    position: absolute;
+    z-index: 1;
+}
+
+
+#banner_img_island{
+      width: 13%;
+    position: absolute;
+   z-index: 2;
+   margin: 48% 0;
+}
+.banner_img img:first-child{
+    width: 13%;
+    position: absolute;
+    padding: 0 1%;
+    z-index: 1;
+}
+.scrolling_banner{
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    overflow: hidden;
+}
+.scrolling_banner div{
+    position: relative;
+    width: 50%;
+    background: rgba(255, 255, 255, 0);
+    overflow: hidden;
+}
+.scrolling_banner div:nth-child(1){
+    position: relative;
+    width: 45%;
+    background-color: #fcfcfc;
+/*    background:url(/img/test1.png);*/
+    background-size: cover;
+    overflow: hidden;
+    margin: 0 0 0 2.5%;
+}
+.scrolling_banner div:nth-child(1) p{
+ 
+    -webkit-text-stroke-color: #3656a8;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    left: 100%;
+        padding: 15% 0;
+    
+    
+}
+.scrolling_banner p{
+    position: absolute;
+    white-space: nowrap;
+    font-size: 1.2em;
+/*     s*/
+    animation: animate 35s linear infinite;
+    color: #719bff;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.destination{
+    width: 100%;
+    position: relative;
+}
+.destination .background{
+    padding: 8%;
+    position: relative;
+}
+.destination .background img{
+    width: 100%;
+    
+}
+.destination p{
+    line-height: 1.2em;
+    font-size: .8em;
+}
+
+.fade-in{
+/*    opacity: 0;*/
+/*    transition:opacity 1200ms ease-in;*/
+    position: absolute;
+}
+.fade-in .show{
+    opacity: 1;
+}
+
+
+
+
+
+
+.section3{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10%;
+/*    position: relative*/
+}
+.container{
+/*    position: relative;*/
+}
+.starynight{
+   width: 95%;
+   padding: 0 2.5%;
+   position: relative;
+}
+.starynight img{
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    clear:both;
+}
+.man{
+    position: absolute;
+}
+.man img{
+    width: 78%;
+    top: 476px;
+    
+}
+
+.fade-in{
+   width: 44%;
+    font-size: 46px;
+    line-height: 60px;
+    position: absolute;
+    top: 100px;
+    right: 114px;
+    z-index: 1;
+    color: #ffffff;
+} 
+
+.come-in {
+  transform: translateX(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+@keyframes come-in {
+  to { transform: translateX(0); }
+}
+
+.section3 p{
+    
+    z-index: 1;
+}
+*/
+
+.row{
+   
+    width: 42%;
+    padding: 10% 10%;
+}
+/*
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
+
+.where{
+    text-align: center;
+    padding: 5% 20% 5% 20%;
+}
+.where p{
+    font-size: .5em;
+    color: #6a6a6a;
+}
+.row2{
+    text-align: right;
+    float: right;
+    width: 39%;
+    padding: 10% 10%;
+}
+
+
+.row3{
+    text-align: right;
+    float: right;
+    width: 39%;
+    padding: 1% 6%;
+/*    overflow: scroll;*/
+    height: 390px;
+}
+.section4{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   
+}
+.section4-wrap{
+    width: 95%;
+   padding: 0 2.5%;
+    position: relative;
+}
+.section4 img{
+    width: 100%;
+    display: block;
+}
+
+.section4 .moon img{
+    width: 30%;
+    
+}
+.section4 .moon{
+    position: absolute;
+    z-index: 7;
+    top: 400px;
+    right: 329px;
+}
+
+.boat{
+    position: absolute;
+    z-index: 7;
+    width: 27%;
+    bottom: 100px;
+    right: 250px;
+}
+.mountain{
+    float: left;
+    position: relative;
+    clear:both;
+    z-index: 6;
+}
+.lake{
+    float: right;
+    clear:both;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+}
+.lake-text{
+        position: absolute;
+    bottom: 450px;
+    left: 320px;
+    font-size: 46px;
+    line-height: 51px;
+    color: #ffffff;
+    text-align: center;
+    z-index: 5;
+}
+
+.clearfix:after{
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:" ";
+    clear:both;
+    height:0;
+}
+.section5{
+/*
+    min-height: 850px;
+    padding: 4% 0 4% 0;
+*/
+}
+
+.section5-wrap{
+    position: relative;
+    background-image: linear-gradient(#87a6f3, #123da8);
+    background-size: 95% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 300vh;
+}
+.underlake-text{
+    font-size: 46px;
+    line-height: 51px;
+/*    text-align: center;*/
+    color: #ffffff;
+    padding: 0 0;
+    position: relative;
+}
+.fish{
+     position:absolute;
+    top: 140px;
+    left: 760px;
+}
+.fish img{
+    width: 60%;
+}
+.scuba-diving{
+     position:absolute;
+    top: 1100px;
+    left: 400px;
+}
+.scuba-diving img{
+    width: 90%;
+}
+.one{
+     position:absolute;
+    top: 450px;
+    left: 250px;
+    opacity: 0.6;
+}
+
+.two{
+     position:absolute;
+    top: 850px;
+    right: 200px;
+    opacity: 0.6;
+}
+
+.three{
+     position:absolute;
+    top: 1300px;
+    left: 250px;
+    opacity: 0.6;
+}
+.four{
+    position:absolute;
+    top: 1900px;
+       padding: 0 33%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.7em;
+    opacity: 0.5;
+}
+.five{
+   position: absolute;
+    top: 2000px;
+    left: 200px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5em;
+    z-index: 7;
+}
+.bottom-img{
+    position: absolute;
+    top: 2270px;
+    
+}
+.bottom-img img{
+    width: 95%;
+    padding: 0 2.5%;
+}
+.heading{
+    text-align: center;
+    margin: 25% 15% 25% 0;
+    float: right;
+}

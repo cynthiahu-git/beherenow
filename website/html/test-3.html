@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <div id="plain-text"></div>
+</body>
+
+<style>
+body {
+	background-color: #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+</style>
+
+<script>
+const text = new Blotter.Text('Liquid', {
+	family: "'EB Garamond', serif",
+  size: 200,
+	fill: '#fff'
+});
+
+let material = new Blotter.LiquidDistortMaterial();
+
+material.uniforms.uSpeed.value = 0.3;
+material.uniforms.uVolatility.value = 0.1;
+material.uniforms.uSeed.value = 0.1;
+
+let blotter = new Blotter(material, {
+  texts: text
+});
+
+let scope = blotter.forText(text);
+let elem = document.getElementById('plain-text');
+scope.appendTo(elem);
+
+$('body').mousemove(function(e) {	
+	const formula = ((e.pageX * e.pageY) / 200000) / 1.5;
+	// const number = formula.toFixed(1);
+	
+	material.uniforms.uVolatility.value = formula;
+	material.uniforms.uSeed.value = formula;
+	
+});
+    </script>
+</html>
